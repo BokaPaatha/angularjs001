@@ -1,0 +1,4 @@
+
+## npm copies the dependencies here. 
+## we dont want them in the git.  
+node_modules

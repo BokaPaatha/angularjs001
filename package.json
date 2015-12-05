@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/BokaPaatha/angularjs001/issues"
   },
-  "homepage": "https://github.com/BokaPaatha/angularjs001#readme"
+  "homepage": "https://github.com/BokaPaatha/angularjs001#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
