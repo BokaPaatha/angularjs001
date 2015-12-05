@@ -5,21 +5,22 @@ var connect = require('gulp-connect')
 var browserify = require('browserify')
 var source = require('vinyl-source-stream')
 
+gulp.task('default', [ 'connect' ])
+
 // Create a basic server. Serve it from public folder on port 4000.
-gulp.task('connect', function() {
+gulp.task('connect', [ 'browserify' ], function() {
 	connect.server({
 		root : 'public',
 		port : 4000
 	})
 })
 
-// Take the Angular file and make it usable. 
+// Take the Angular file and make it usable.
 gulp.task('browserify', function() {
-    // Grabs the app.js file
-    return browserify('./app/app.js')
-        // bundles it and creates a file called main.js
-        .bundle()
-        .pipe(source('main.js'))
-        // saves it the public/js/ directory
-        .pipe(gulp.dest('./public/js/'));
+	// Grabs the app.js file
+	return browserify('./app/app.js')
+	// bundles it and creates a file called main.js
+	.bundle().pipe(source('main.js'))
+	// saves it the public/js/ directory
+	.pipe(gulp.dest('./public/js/'));
 })
