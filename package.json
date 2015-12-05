@@ -1,0 +1,22 @@
+{
+  "name": "angularjs001",
+  "version": "1.0.0",
+  "description": "AngularJS ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BokaPaatha/angularjs001.git"
+  },
+  "keywords": [
+    "key"
+  ],
+  "author": "bokapaatha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BokaPaatha/angularjs001/issues"
+  },
+  "homepage": "https://github.com/BokaPaatha/angularjs001#readme"
+}
