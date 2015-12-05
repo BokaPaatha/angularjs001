@@ -27,5 +27,12 @@ gulp.task('browserify', function() {
 
 // Watch for any change in js file and browserify them
 gulp.task('watch', function() {
-    gulp.watch('app/**/*.js', ['browserify'])
+    gulp.watch('./app/**/*.js', ['browserify'])
+    gulp.watch('./sass/**/*.sass', ['sass'])
+})
+
+// Compile sass files into css 
+gulp.task('sass', function() {
+    return sass('./sass/*.sass')
+        .pipe(gulp.dest('public/css'))
 })
