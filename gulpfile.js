@@ -5,10 +5,10 @@ var connect = require('gulp-connect')
 var browserify = require('browserify')
 var source = require('vinyl-source-stream')
 
-gulp.task('default', [ 'connect' ])
+gulp.task('default', [ 'connect', 'watch' ])
 
 // Create a basic server. Serve it from public folder on port 4000.
-gulp.task('connect', [ 'browserify' ], function() {
+gulp.task('connect',  function() {
 	connect.server({
 		root : 'public',
 		port : 4000
@@ -23,4 +23,9 @@ gulp.task('browserify', function() {
 	.bundle().pipe(source('main.js'))
 	// saves it the public/js/ directory
 	.pipe(gulp.dest('./public/js/'));
+})
+
+// Watch for any change in js file and browserify them
+gulp.task('watch', function() {
+    gulp.watch('app/**/*.js', ['browserify'])
 })

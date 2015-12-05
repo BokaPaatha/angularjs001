@@ -2,3 +2,7 @@
 ## npm copies the dependencies here. 
 ## we dont want them in the git.  
 node_modules
+
+## This is the main.js that browserify creates while gulp runs. 
+## We dont want this in git. 
+public/js/main.js
